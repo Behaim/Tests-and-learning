@@ -47,6 +47,14 @@ button {
 	font-size: 1.2em;
 }
 
+textarea {
+	width: 98%;
+	height: 400px;
+	margin-top:10px;
+	border-radius: 7px;
+	font-size: 1.7em;
+	border: 2px solid silver;
+}
 
 #auth {
 	width: 180px;
@@ -87,6 +95,7 @@ button {
 	height: 400px;
 	margin-top:10px;
 	border-radius: 7px;
-	font-size: 1.7em;
+	font-size: 4em;
 	border: 2px solid silver;
+	text-align: center;
 }
