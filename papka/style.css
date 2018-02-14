@@ -16,7 +16,7 @@ body {
 	font-size: 1em;
 	font-family: "Segoe UI", sans-serif;
 	line-height: 135%;
-	background: url('fone.jpg') repeat-x center 0;
+	background: url('fone.jpg') repeat-y;
 }
 
 header {
@@ -53,6 +53,7 @@ button {
 	height: 40px;
 	text-align: center;
 	font-size: 1.2em;
+	margin-left: 0.9em;
 }
 
 #authb {
@@ -72,15 +73,20 @@ button {
 #search {
 	width: 300px;
 	height: 30px;
+	margin-right: 0.5em;
 }
 
 #searchb {
 	width: 100px;
 	height: 33px;
+	margin-right: 0.9em;
 }
 
 #text {
 	width: 98%;
 	height: 400px;
 	margin-top:10px;
+	border-radius: 7px;
+	font-size: 1.7em;
+	border: 2px solid silver;
 }
