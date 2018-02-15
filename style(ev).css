@@ -28,7 +28,7 @@ input {
 	border-radius: 7px;
 	font-size: 1em;
 	border: 2px solid silver;
-}	
+}
 
 h2 {
 	width: 20%;
@@ -98,4 +98,17 @@ textarea {
 	font-size: 4em;
 	border: 2px solid silver;
 	text-align: center;
+}
+
+#inn {
+	margin-top: 10px;
+}
+
+#stat {
+	width: auto;
+	height: 40px;
+	text-align: center;
+	font-size: 1em;
+	font-weight: bold;
+	color: #4CB63B;
 }
