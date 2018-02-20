@@ -1,0 +1,66 @@
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+html {
+	height: 100%;
+}
+
+h3,h4 {
+	font-weight: normal;
+}
+
+#tab1 {
+	width: 40%;
+	height: 120px;
+	border: 2px solid silver;
+	border-radius: 8px;
+}
+
+#text1 {
+	width: 150px;
+	height: 20px;
+	background-color: #fff;
+	position: relative;
+	top: 9px;
+	right: 240px;
+}
+
+#tab {
+	width: 40%;
+	height: 320px;
+	border: 2px solid silver;
+	border-radius: 7px;
+}
+
+#text {
+	width: 120px;
+	height: 20px;
+	background-color: #fff;
+	position: relative;
+	top: 9px;
+	right: 255px;
+}
+
+#input {
+	width: 270px;
+	height: 30px;
+	margin-top: 10px;
+}
+
+#id {
+	text-align: left;
+	padding-top: 30px;
+	padding-left: 10px;
+	float: left;
+}
+
+
+#name {
+	text-align: left;
+	padding-top: 30px;
+	position: relative;
+	left: 40px
+}
