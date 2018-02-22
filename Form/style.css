@@ -6,18 +6,37 @@
 
 html {
 	height: 100%;
+	padding: 1%;
 }
 
 h3,h4 {
 	font-weight: normal;
 }
 
-#tab1 {
-	width: 40%;
-	height: 120px;
+textarea {
+	width: 616px;
+	height: 100px;
 	border: 2px solid silver;
-	border-radius: 8px;
+	border-radius: 7px;
+	margin-top: 10px;
 }
+
+#common {
+	width:44em;
+	height: auto;
+	border-radius: 7px;
+	border: 2px solid silver;
+	padding: 10px;
+	margin-top: 20px;
+}
+
+#tab1 {
+	width: 40em;
+	height: 120px;
+	border: 1px solid black;
+	border-radius: 7px;
+	padding: 5px;
+}	
 
 #text1 {
 	width: 150px;
@@ -29,10 +48,11 @@ h3,h4 {
 }
 
 #tab {
-	width: 40%;
-	height: 340px;
-	border: 2px solid silver;
+	width: 40em;
+	height: 360px;
+	border: 1px solid black;
 	border-radius: 7px;
+	padding: 5px;
 }
 
 #text {
@@ -95,4 +115,36 @@ h3,h4 {
 	padding-top: 30px;
 	position: relative;
 	left: 81px;
+}
+
+
+#slider {
+	height: 50px;
+	text-align: left;
+}
+
+#sliderinput {
+	width: 230px;
+	margin-left: 25px;
+}
+
+#p0 {
+	width: 20px;
+	height: 20px;
+	position: relative;
+	top: 20px;
+	left: 10px;
+}
+
+#p10 {
+	width: 20px;
+	height: 20px;
+	position: relative;
+	bottom: 23px;
+	left: 260px;
+}
+
+#Textotzv {
+	text-align: left;
+	padding-left: 10px;
 }
