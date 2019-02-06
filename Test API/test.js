@@ -143,7 +143,7 @@ function callback() {
 
   let str = JSON.stringify(body); 
 
-  xhr.open('POST', 'https://apiproxy.telphin.ru:443/api/ver1.0/extension/233081/callback/', false);
+  xhr.open('POST', 'https://apiproxy.telphin.ru:443/api/ver1.0/extension//*extension id*//callback/', false);
 
   xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.setRequestHeader('Authorization', 'Bearer ' + token);
