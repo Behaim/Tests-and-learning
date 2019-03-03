@@ -157,3 +157,36 @@ function callback() {
     }
 } 
 
+
+function didlist() {
+
+  let xhr = new XMLHttpRequest();
+  
+  xhr.open('GET', 'https://apiproxy.telphin.ru/api/ver1.0/client/'+ idClient + '/did/', false);
+
+  xhr.setRequestHeader('Authorization', 'Bearer ' + token); 
+
+  xhr.send();
+
+  if (xhr.status !== 200) {
+    console.log( xhr.status + ': ' + xhr.statusText );
+  } else {
+    did = JSON.parse(xhr.response);
+
+    did.forEach(function(item, i, arr) {
+
+      for (key in item) {
+
+        if(key == 'id') {
+
+         didId.push(item[key]);
+        }
+        
+      }
+      return didId;
+    });
+
+    console.log(xhr.responseText);
+    console.log(didId);  
+  }
+}
