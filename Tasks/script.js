@@ -1,0 +1,51 @@
+
+//////////Palindrome//////////
+
+const palindrome = str => {
+	str = str.toLowerCase();
+	return str === str.split('').reverse().join('');
+}
+
+palindrome(str);
+
+
+
+//////////FizzBuzz//////////
+
+const fizzBuzz = num => {
+	for(let i = 1; i <= num; i++) {
+		if(i % 3 === 0 && i % 5 === 0) {
+			console.log('fizzbuzz');
+		} else if (i % 3 === 0) {
+			console.log('fizz');
+		} else if (i % 5 === 0) {
+			console.log('buzz');
+		} else {
+			console.log(i);
+		}
+	}
+}
+
+fizzBuzz(num);
+
+
+
+//////////FindVowels//////////
+
+const findVowels = str => {
+  let count = 0
+  const vowels = ['a', 'e', 'i', 'o', 'u']
+  for(let char of str.toLowerCase()) {
+    if(vowels.includes(char)) {
+      count++
+    }
+  }
+  return count
+}
+
+console.log(findVowels(str));
+
+
+
+//////////Fibonacci//////////
+
