@@ -47,5 +47,35 @@ console.log(findVowels(str));
 
 
 
-//////////Fibonacci//////////
+//////////Anagram//////////
+
+const buildCharObject = str => {
+
+  const charObj = {}
+
+  for(let char of str.replace(/[^\w]/g).toLowerCase()) {
+
+    charObj[char] = charObj[char] + 1 || 1
+  }
+  return charObj
+}
+const anagram = (strA, strB) => {
+
+  const aCharObject = buildCharObject(strA)
+  const bCharObject = buildCharObject(strB)
+
+  if(Object.keys(aCharObject).length !== Object.keys(bCharObject).length) {
+    return false
+  }
+
+  for(let char in aCharObject) {
+    if(aCharObject[char] !== bCharObject[char]) {
+      return false
+    }
+  }
+
+  return true
+}
+
+console.log(anagram("find", "infssd"));
 
