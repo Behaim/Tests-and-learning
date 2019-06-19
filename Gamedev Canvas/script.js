@@ -2,8 +2,8 @@
   let ctx = canvas.getContext("2d");
   let x = canvas.width/2;
   let y = canvas.height-30;
-  let dx = 2;
-  let dy = -2;
+  let dx = 3;
+  let dy = -3;
   let ballRadius = 10;
   let color = randColor();
   let paddleHeight = 7;
@@ -19,6 +19,7 @@
   let brickOffsetTop = 30;
   let brickOffsetLeft = 30;
   let score = 0;
+  let lives = 2;
 
   let bricks = [];
     for(let c=0; c<brickColumnCount; c++) {
@@ -73,7 +74,6 @@
 
 
 
-
   function draw() {
 
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -81,6 +81,7 @@
       drawBall();
       drawPaddle();
       drawScore();
+      drawLives();
       collisionDetection();
       x += dx;
       y += dy;
@@ -94,12 +95,21 @@
       } else if(y + dy > canvas.height-ballRadius) {
         if(x > paddleX && x < paddleX + paddleWidth) {
           // color = randColor();
-          dy = -dy - 0.2;
+          dy = -dy - 0.3;
         }
         else {
-          alert("GAME OVER" +"\n   Score " + score);
+          lives--;
+          if(!lives) {           
+            alert("GAME OVER");
             document.location.reload();
-
+          } else {
+            x = canvas.width/2;
+            y = canvas.height-30;
+            dx = 3;
+            dy = -3;
+            paddleX = (canvas.width-paddleWidth)/2;
+          } 
+            
         }
       }
       if(rightPressed && paddleX < canvas.width-paddleWidth) {
@@ -108,7 +118,10 @@
       else if(leftPressed && paddleX > 0) {
         paddleX -= 7;
       }
+      requestAnimationFrame(draw);
   }
+
+
 
   document.addEventListener("keydown", keyDownHandler, false);
   document.addEventListener("keyup", keyUpHandler, false);
@@ -152,6 +165,7 @@
                     if(score == brickRowCount*brickColumnCount) {
                         alert("YOU WIN, CONGRATULATIONS!" +"\n               Score " + score);
                         document.location.reload();
+                       
                     }
                 }
             }
@@ -166,4 +180,10 @@
     ctx.fillText("Score: "+score, 8, 20);
   }
 
-let interval = setInterval(draw, 10);
+  function drawLives() {
+    ctx.font = "16px Arial";
+    ctx.fillStyle = "#0095DD";
+    ctx.fillText("Lives: "+lives, canvas.width-65, 20);
+  }
+
+draw();
