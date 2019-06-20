@@ -7,11 +7,11 @@ let fg = new Image();
 let pipeUp = new Image(); 
 let pipeBottom = new Image();
 
-bird.src = "image/flappy_bird_bird.png"; 
-bg.src = "image/flappy_bird_bg.png"; 
-fg.src = "image/flappy_bird_fg.png"; 
-pipeUp.src = "image/flappy_bird_pipeUp.png"; 
-pipeBottom.src = "image/flappy_bird_pipeBottom.png";
+bird.src = "flappy_bird_bird.png"; 
+bg.src = "flappy_bird_bg.png"; 
+fg.src = "flappy_bird_fg.png"; 
+pipeUp.src = "flappy_bird_pipeUp.png"; 
+pipeBottom.src = "flappy_bird_pipeBottom.png";
 
 let gap = 90;
 
